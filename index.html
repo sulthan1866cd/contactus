@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact us</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+        <h1 class="">
+            CONTACT US
+        </h1>
+        <form class="contactus-form" action="" onsubmit="">
+
+            <label for="">First Name</label>
+            <input id="firstName" type="text" placeholder="Enter First Name" required>
+            <p id="firstNameError" class="error-msg"></p>
+
+            <label for="">Last Name</label>
+            <input id="lastName" type="text" placeholder="Enter Last Name" required>
+            <p id="lastNameError" class="error-msg"></p>
+
+            <label for="">Contact Number</label>
+            <input id="contact" type="text" placeholder="Enter Contact Number" required>
+            <p id="contactError" class="error-msg"></p>
+
+            <label for="">Email Address</label>
+            <input id="email" type="email" placeholder="Enter Email Address" required>
+            <p id="emailError" class="error-msg"></p>
+
+            <label for="">Location</label>
+            <input id="location" type="text" placeholder="Enter Location" required>
+            <p id="locationError" class="error-msg"></p>
+
+            <button class="contact-submit" onclick="validate(event)" type="submit"> Submit</button>
+        </form>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>

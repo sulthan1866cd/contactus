@@ -1,0 +1,59 @@
+body{
+    margin: 0px;
+    padding: 0px;
+
+}
+
+.container{
+    margin: 5rem 40rem;
+}
+
+.contactus-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.contactus-form input{
+    height: 2rem;
+    border: 1px solid gray;
+    border-radius: 8px;
+    margin: 0.5rem;
+    padding: 0.3rem 0.8rem;
+}
+.contactus-form label{
+    margin: 0.5rem;
+}
+
+.error-msg{
+    margin: 0.1rem 1rem;
+    font-size: small;
+    color: rgb(255, 57, 57);
+}
+
+.contact-submit{
+    background-color: navy;
+    border: 1px solid navy;
+    border-radius: 100px;
+    margin-top: 1.5rem;
+    padding: 0.5rem 1rem;
+    color: white;
+    font-weight: bold;
+}
+
+@media screen and (max-width:480px) {
+    .container{
+        margin: 1rem;
+    }
+}
+@media screen and (max-width:780px) {
+    .container{
+        margin: 2rem;
+    }
+    
+}
+@media screen and (max-width:1400px) {
+    .container{
+        margin: 4rem;
+    }
+    
+}
