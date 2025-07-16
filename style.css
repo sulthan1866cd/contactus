@@ -1,59 +1,73 @@
-body{
-    margin: 0px;
-    padding: 0px;
-
+body {
+  margin: 0px;
+  padding: 0px;
 }
 
-.container{
-    margin: 5rem 40rem;
+.alert {
+  display: none;
+  text-align: center;
+  align-self: center;
+  color: darkgreen;
+  background-color: rgba(30, 255, 0, 0.3);
+  border: 2px solid green;
+  border-radius: 100px;
+  padding: 0.5rem;
+  min-width: 30vw;
 }
 
-.contactus-form{
-    display: flex;
-    flex-direction: column;
+.container {
+  margin: 5rem 40rem;
+}
+.contact-heading {
+  text-align: center;
+}
+.contactus-form {
+  display: flex;
+  flex-direction: column;
 }
 
-.contactus-form input{
-    height: 2rem;
-    border: 1px solid gray;
-    border-radius: 8px;
-    margin: 0.5rem;
-    padding: 0.3rem 0.8rem;
+.contactus-form input {
+  height: 2rem;
+  border: 1px solid gray;
+  border-radius: 8px;
+  margin: 0.5rem;
+  padding: 0.3rem 0.8rem;
 }
-.contactus-form label{
-    margin: 0.5rem;
-}
-
-.error-msg{
-    margin: 0.1rem 1rem;
-    font-size: small;
-    color: rgb(255, 57, 57);
+.contactus-form label {
+  margin: 0.5rem;
 }
 
-.contact-submit{
-    background-color: navy;
-    border: 1px solid navy;
-    border-radius: 100px;
-    margin-top: 1.5rem;
-    padding: 0.5rem 1rem;
-    color: white;
-    font-weight: bold;
+.error-msg {
+  margin: 0.1rem 1rem;
+  font-size: small;
+  color: rgb(255, 57, 57);
 }
 
-@media screen and (max-width:480px) {
-    .container{
-        margin: 1rem;
-    }
+.contact-submit {
+  background-color: navy;
+  border: 1px solid navy;
+  border-radius: 100px;
+  margin-top: 1.5rem;
+  padding: 0.5rem 1rem;
+  color: white;
+  font-weight: bold;
 }
-@media screen and (max-width:780px) {
-    .container{
-        margin: 2rem;
-    }
-    
+
+@media screen and (max-width: 480px) {
+  .container,
+  .alert {
+    margin: 1rem;
+  }
 }
-@media screen and (max-width:1400px) {
-    .container{
-        margin: 4rem;
-    }
-    
+@media screen and (max-width: 780px) {
+  .container,
+  .alert {
+    margin: 2rem;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .container,
+  .alert {
+    margin: 4rem;
+  }
 }
