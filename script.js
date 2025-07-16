@@ -1,5 +1,6 @@
 const validate = (event) => {
-    event.preventDefault()
+  event.preventDefault();
+  
   const firstNameElement = document.getElementById("firstName");
   const lastNameElemnt = document.getElementById("lastName");
   const contactElement = document.getElementById("contact");
@@ -12,23 +13,14 @@ const validate = (event) => {
   const email = emailElement.value.trim();
   const location = locationElemnt.value.trim();
 
-  const firstNameErrorElement = document.getElementById("firstNameError");    event.preventDefault();
-
-    event.preventDefault();
-
-    event.preventDefault();
-
-    event.preventDefault();
-
-    event.preventDefault();
-
+  const firstNameErrorElement = document.getElementById("firstNameError");
   if (!/^[A-Z a-z]+$/.test(firstName)) {
     firstNameErrorElement.textContent =
       "First Name is required and should only contain only alphabetic characters (A-Z, a-z)";
     return;
   } else {
     firstNameErrorElement.textContent = "";
-    lastNameElemnt.focus()
+    lastNameElemnt.focus();
   }
 
   const lastNameErrorElement = document.getElementById("lastNameError");
@@ -38,16 +30,17 @@ const validate = (event) => {
     return;
   } else {
     lastNameErrorElement.textContent = "";
-    contactElement.focus()
+    contactElement.focus();
   }
 
   const contactErrorElemnt = document.getElementById("contactError");
   if (!/^[0-9]{10}$/.test(contact)) {
     contactErrorElemnt.textContent =
       "Contact should only contain 10 digits (0-9)";
+    return;
   } else {
     contactErrorElemnt.textContent = "";
-    emailElement.focus()
+    emailElement.focus();
   }
 
   const emailErrorElement = document.getElementById("emailError");
@@ -57,24 +50,28 @@ const validate = (event) => {
     return;
   } else {
     emailErrorElement.textContent = "";
-    locationElemnt.focus()
+    locationElemnt.focus();
   }
 
   const locationErrorElement = document.getElementById("locationError");
-  if (location==='') {
-    locationErrorElement.textContent =
-      "Please enter location";
+  if (location === "") {
+    locationErrorElement.textContent = "Please enter location";
     return;
   } else {
     locationErrorElement.textContent = "";
   }
 
-  alert("Form submited successfully")
-  firstNameElement.value=''
-  lastNameElemnt.value=''
-  contactElement.value=''
-  emailElement.value=''
-  locationElemnt.value=''
+  const alertElement = document.getElementById("alert");
+  alertElement.style.display = "block";
+  alertElement.textContent = "Form submitted successfully";
+  setTimeout(() => {
+    alertElement.textContent = "";
+    alertElement.style.display = "none";
+  }, 4000);
 
-
+  firstNameElement.value = "";
+  lastNameElemnt.value = "";
+  contactElement.value = "";
+  emailElement.value = "";
+  locationElemnt.value = "";
 };
